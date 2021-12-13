@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.9.0 on win32)" generated="20211213 21:06:37.861" rpa="false" schemaversion="2">
+<suite id="s1" name="LoginTests" source="E:\User\Documents\Github\SeleniumIDE-RobotFramework-Practice\Tests\LoginTests.robot">
+<test id="s1-t1" name="Successful Login">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>https://www.saucedemo.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211213 21:06:38.102" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<status status="PASS" starttime="20211213 21:06:38.101" endtime="20211213 21:06:40.246"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20211213 21:06:40.247" endtime="20211213 21:06:40.248"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>name:user-name</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211213 21:06:40.249" level="INFO">Typing text 'standard_user' into text field 'name:user-name'.</msg>
+<status status="PASS" starttime="20211213 21:06:40.248" endtime="20211213 21:06:40.464"/>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<arg>name:password</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20211213 21:06:40.464" level="INFO">Typing password into text field 'name:password'.</msg>
+<msg timestamp="20211213 21:06:40.514" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20211213 21:06:40.601" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20211213 21:06:40.464" endtime="20211213 21:06:40.601"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>name:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211213 21:06:40.602" level="INFO">Clicking button 'name:login-button'.</msg>
+<status status="PASS" starttime="20211213 21:06:40.601" endtime="20211213 21:06:40.978"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Credentials Entered</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20211213 21:06:40.978" level="INFO">Credentials Entered</msg>
+<status status="PASS" starttime="20211213 21:06:40.978" endtime="20211213 21:06:40.979"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>Sauce Labs Backpack</arg>
+<arg>INFO</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211213 21:06:41.022" level="INFO">Current page contains text 'Sauce Labs Backpack'.</msg>
+<status status="PASS" starttime="20211213 21:06:40.987" endtime="20211213 21:06:41.022"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>$29.99</arg>
+<arg>INFO</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211213 21:06:41.040" level="INFO">Current page contains text '$29.99'.</msg>
+<status status="PASS" starttime="20211213 21:06:41.024" endtime="20211213 21:06:41.041"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>carry.allTheThings() with the sleek, str</arg>
+<arg>INFO</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211213 21:06:41.065" level="INFO">Current page contains text 'carry.allTheThings() with the sleek, str'.</msg>
+<status status="PASS" starttime="20211213 21:06:41.041" endtime="20211213 21:06:41.065"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>Sauce Labs Bike Light</arg>
+<arg>INFO</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211213 21:06:41.081" level="INFO">Current page contains text 'Sauce Labs Bike Light'.</msg>
+<status status="PASS" starttime="20211213 21:06:41.066" endtime="20211213 21:06:41.081"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>$9.99</arg>
+<arg>INFO</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211213 21:06:41.096" level="INFO">Current page contains text '$9.99'.</msg>
+<status status="PASS" starttime="20211213 21:06:41.081" endtime="20211213 21:06:41.096"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>A red light isn't the desired state in t</arg>
+<arg>INFO</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211213 21:06:41.127" level="INFO">Current page contains text 'A red light isn't the desired state in t'.</msg>
+<status status="PASS" starttime="20211213 21:06:41.097" endtime="20211213 21:06:41.127"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211213 21:06:41.131" endtime="20211213 21:06:43.362"/>
+</kw>
+<doc>Successful Login</doc>
+<status status="PASS" starttime="20211213 21:06:38.101" endtime="20211213 21:06:43.362"/>
+</test>
+<test id="s1-t2" name="Unsucessful Login by Locked Out User">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>https://www.saucedemo.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211213 21:06:43.364" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<status status="PASS" starttime="20211213 21:06:43.363" endtime="20211213 21:06:45.135"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20211213 21:06:45.136" endtime="20211213 21:06:45.137"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>name:user-name</arg>
+<arg>locked_out_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211213 21:06:45.138" level="INFO">Typing text 'locked_out_user' into text field 'name:user-name'.</msg>
+<status status="PASS" starttime="20211213 21:06:45.137" endtime="20211213 21:06:45.337"/>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<arg>name:password</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20211213 21:06:45.342" level="INFO">Typing password into text field 'name:password'.</msg>
+<msg timestamp="20211213 21:06:45.396" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20211213 21:06:45.469" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20211213 21:06:45.342" endtime="20211213 21:06:45.469"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>name:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211213 21:06:45.470" level="INFO">Clicking button 'name:login-button'.</msg>
+<status status="PASS" starttime="20211213 21:06:45.469" endtime="20211213 21:06:45.824"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Credentials Entered</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20211213 21:06:45.825" level="INFO">Credentials Entered</msg>
+<status status="PASS" starttime="20211213 21:06:45.825" endtime="20211213 21:06:45.825"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>Epic sadface: Sorry, this user has been</arg>
+<arg>INFO</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211213 21:06:45.842" level="INFO">Current page contains text 'Epic sadface: Sorry, this user has been'.</msg>
+<status status="PASS" starttime="20211213 21:06:45.825" endtime="20211213 21:06:45.842"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>Accepted usernames are:</arg>
+<arg>INFO</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211213 21:06:45.857" level="INFO">Current page contains text 'Accepted usernames are:'.</msg>
+<status status="PASS" starttime="20211213 21:06:45.842" endtime="20211213 21:06:45.857"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>Password for all users:</arg>
+<arg>INFO</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211213 21:06:45.877" level="INFO">Current page contains text 'Password for all users:'.</msg>
+<status status="PASS" starttime="20211213 21:06:45.857" endtime="20211213 21:06:45.878"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211213 21:06:45.878" endtime="20211213 21:06:48.046"/>
+</kw>
+<doc>Unsucessful Login by a Locked Out User</doc>
+<status status="PASS" starttime="20211213 21:06:43.363" endtime="20211213 21:06:48.047"/>
+</test>
+<test id="s1-t3" name="Wrong Password">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>https://www.saucedemo.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211213 21:06:48.050" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<status status="PASS" starttime="20211213 21:06:48.049" endtime="20211213 21:06:49.867"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20211213 21:06:49.867" endtime="20211213 21:06:49.869"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>name:user-name</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211213 21:06:49.870" level="INFO">Typing text 'standard_user' into text field 'name:user-name'.</msg>
+<status status="PASS" starttime="20211213 21:06:49.869" endtime="20211213 21:06:50.020"/>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<arg>name:password</arg>
+<arg>wrong_password</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20211213 21:06:50.031" level="INFO">Typing password into text field 'name:password'.</msg>
+<msg timestamp="20211213 21:06:50.118" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20211213 21:06:50.207" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20211213 21:06:50.031" endtime="20211213 21:06:50.207"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>name:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211213 21:06:50.208" level="INFO">Clicking button 'name:login-button'.</msg>
+<status status="PASS" starttime="20211213 21:06:50.207" endtime="20211213 21:06:50.515"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Credentials Entered</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20211213 21:06:50.516" level="INFO">Credentials Entered</msg>
+<status status="PASS" starttime="20211213 21:06:50.516" endtime="20211213 21:06:50.516"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>Epic sadface: Username and password do n</arg>
+<arg>INFO</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211213 21:06:50.538" level="INFO">Current page contains text 'Epic sadface: Username and password do n'.</msg>
+<status status="PASS" starttime="20211213 21:06:50.517" endtime="20211213 21:06:50.538"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>Accepted usernames are:</arg>
+<arg>INFO</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211213 21:06:50.554" level="INFO">Current page contains text 'Accepted usernames are:'.</msg>
+<status status="PASS" starttime="20211213 21:06:50.539" endtime="20211213 21:06:50.554"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>Password for all users:</arg>
+<arg>INFO</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211213 21:06:50.570" level="INFO">Current page contains text 'Password for all users:'.</msg>
+<status status="PASS" starttime="20211213 21:06:50.555" endtime="20211213 21:06:50.570"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211213 21:06:50.571" endtime="20211213 21:06:52.772"/>
+</kw>
+<doc>Unsucessful Login due to wrong password</doc>
+<status status="PASS" starttime="20211213 21:06:48.048" endtime="20211213 21:06:52.774"/>
+</test>
+<test id="s1-t4" name="Loggin as a Problem User">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>https://www.saucedemo.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211213 21:06:52.778" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<status status="PASS" starttime="20211213 21:06:52.777" endtime="20211213 21:06:54.581"/>
+</kw>
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20211213 21:06:54.585" endtime="20211213 21:06:54.586"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>name:user-name</arg>
+<arg>problem_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211213 21:06:54.587" level="INFO">Typing text 'problem_user' into text field 'name:user-name'.</msg>
+<status status="PASS" starttime="20211213 21:06:54.586" endtime="20211213 21:06:54.814"/>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<arg>name:password</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20211213 21:06:54.815" level="INFO">Typing password into text field 'name:password'.</msg>
+<msg timestamp="20211213 21:06:54.879" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20211213 21:06:54.952" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20211213 21:06:54.815" endtime="20211213 21:06:54.952"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>name:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211213 21:06:54.955" level="INFO">Clicking button 'name:login-button'.</msg>
+<status status="PASS" starttime="20211213 21:06:54.954" endtime="20211213 21:06:55.319"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Credentials Entered</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20211213 21:06:55.322" level="INFO">Credentials Entered</msg>
+<status status="PASS" starttime="20211213 21:06:55.322" endtime="20211213 21:06:55.322"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>Sauce Labs Backpack</arg>
+<arg>INFO</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211213 21:06:55.347" level="INFO">Current page contains text 'Sauce Labs Backpack'.</msg>
+<status status="PASS" starttime="20211213 21:06:55.323" endtime="20211213 21:06:55.347"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>$29.99</arg>
+<arg>INFO</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211213 21:06:55.369" level="INFO">Current page contains text '$29.99'.</msg>
+<status status="PASS" starttime="20211213 21:06:55.347" endtime="20211213 21:06:55.370"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>carry.allTheThings() with the sleek, str</arg>
+<arg>INFO</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211213 21:06:55.388" level="INFO">Current page contains text 'carry.allTheThings() with the sleek, str'.</msg>
+<status status="PASS" starttime="20211213 21:06:55.371" endtime="20211213 21:06:55.389"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>Sauce Labs Bike Light</arg>
+<arg>INFO</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211213 21:06:55.404" level="INFO">Current page contains text 'Sauce Labs Bike Light'.</msg>
+<status status="PASS" starttime="20211213 21:06:55.389" endtime="20211213 21:06:55.404"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>$9.99</arg>
+<arg>INFO</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211213 21:06:55.420" level="INFO">Current page contains text '$9.99'.</msg>
+<status status="PASS" starttime="20211213 21:06:55.405" endtime="20211213 21:06:55.420"/>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>A red light isn't the desired state in t</arg>
+<arg>INFO</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211213 21:06:55.436" level="INFO">Current page contains text 'A red light isn't the desired state in t'.</msg>
+<status status="PASS" starttime="20211213 21:06:55.420" endtime="20211213 21:06:55.436"/>
+</kw>
+<kw name="Page Should Contain Image" library="Selenium2Library">
+<arg>https://www.saucedemo.com/inventory.html#</arg>
+<arg>INFO</arg>
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211213 21:07:00.739" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211213 21:07:00.537" endtime="20211213 21:07:00.740"/>
+</kw>
+<msg timestamp="20211213 21:07:00.742" level="FAIL">INFO</msg>
+<status status="FAIL" starttime="20211213 21:06:55.437" endtime="20211213 21:07:00.742"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20211213 21:07:00.743" endtime="20211213 21:07:00.743"/>
+</kw>
+<doc>Sucessful Login by Problem user</doc>
+<status status="FAIL" starttime="20211213 21:06:52.776" endtime="20211213 21:07:00.743">INFO</status>
+</test>
+<doc>Login Tests</doc>
+<status status="FAIL" starttime="20211213 21:06:37.863" endtime="20211213 21:07:00.745"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="1" skip="0" id="s1" name="LoginTests">LoginTests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
